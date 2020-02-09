@@ -1,0 +1,37 @@
+@charset "UTF-8";
+html {
+  font-size:10px;
+}
+body {
+  font-size:1.6rem;
+}
+h1 {
+  font-size: 3.6rem;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+}
+a:hover {
+  text-decoration: none;
+  color:inherit;
+}
+
+.underbar {
+  position: relative;
+  display: inline-block;
+  transition: .3s;
+  font-weight:bold;
+}
+
+.underbar::after {
+  content:"";
+  width:100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border-bottom: 1px solid #333;
+  animation: wide .5s;
+}
+
