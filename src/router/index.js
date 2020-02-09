@@ -1,9 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-import Photos from '../views/Photos.vue'
-import Image from '../views/Image.vue'
-// const Image = () => import(/* webpackChunkName: "image" */ '../views/Image.vue')
+// import Photos from '../views/Photos.vue'
+// import Image from '../views/Image.vue'
+const Photos = () => import(/* webpackChunkName: "photos" */ '../views/Photos.vue')
+const Image = () => import(/* webpackChunkName: "image" */ '../views/Image.vue')
 
 Vue.use(VueRouter)
 

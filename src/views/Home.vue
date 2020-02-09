@@ -16,9 +16,6 @@
 
 export default {
   name: 'home',
-  created() {
-    console.log("run it")
-  }
 }
 </script>
 

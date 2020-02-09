@@ -4,7 +4,7 @@
     <div class="row m-0 p-0">
       <ul class="col-12 m-0 p-0 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-5">
         <li v-for="(img, index) in imgs" :key="index" class="text-center">
-            <img @click="opne(index)" :src="img">
+            <img class="photoImage" @click="opne(index)" :src="img">
         </li>
       </ul>
     </div>
@@ -33,6 +33,12 @@ export default {
         require(`../../static/img_5.jpg`),
         require(`../../static/img_6.jpg`),
         require(`../../static/img_7.jpg`),
+        require(`../../static/img_8.jpg`),
+        require(`../../static/img_9.jpg`),
+        require(`../../static/img_10.jpg`),
+        require(`../../static/img_11.jpg`),
+        require(`../../static/img_12.jpg`),
+        require(`../../static/img_13.jpg`),
       ]
     }
   },
@@ -44,7 +50,6 @@ export default {
   },
   created() {
     this.$emit('img-length',this.imgs)
-    console.log(`created:${this.imgs.length}`)
   },
 }
 </script>
@@ -53,5 +58,8 @@ export default {
 li {
   padding:10px;
   list-style: none;
+}
+.photoImage {
+  cursor:pointer;
 }
 </style>
