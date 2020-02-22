@@ -2,19 +2,19 @@
   <div id="app">
     <div id="nav" class="m-0 row flex-column">
       <div class="ml-4 px-0">
-        <h1 class="m-0">TERASHIMA MASATO</h1>
+        <h1 class="m-0"><a href="/">TERASHIMA MASATO</a></h1>
       </div>
       <div class="nav_list_link row col-12 px-0 m-0 justify-content-center">
         <div class="row text-center">
           <router-link active-class="active--link" exact class="router-link" to="/">Home</router-link>
-          <router-link active-class="active--link" class="router-link" to="/photos">Photos</router-link>
+          <router-link active-class="active--link" class="router-link" to="/photo_list">Photos</router-link>
         </div>
       </div>
     </div>
     <div class="container px-5 px-md-0">
       <transition name="fade" mode="out-in" appear>
         <keep-alive>
-          <router-view @img-length="imgLength" :imgs="imgs" />
+          <router-view />
         </keep-alive>
       </transition>
     </div>

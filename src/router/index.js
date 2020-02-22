@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
-// import Photos from '../views/Photos.vue'
-// import Image from '../views/Image.vue'
-const Photos = () => import(/* webpackChunkName: "photos" */ '../views/Photos.vue')
-const Image = () => import(/* webpackChunkName: "image" */ '../views/Image.vue')
+import PhotoList from '../views/PhotoList.vue'
+// import PhotoDisplay from '../views/PhotoDisplay.vue'
+// const PhotoList = () => import(/* webpackChunkName: "photo-list" */ '../views/PhotoList.vue')
+const PhotoDisplay = () => import(/* webpackChunkName: "photo-display" */ '../views/PhotoDisplay.vue')
 
 Vue.use(VueRouter)
 
@@ -15,18 +15,18 @@ const routes = [
     component: Home
   },
   {
-    path: '/photos',
-    name: 'photos',
+    path: '/photo_list',
+    name: 'photo_list',
     // route level code-splitting
-    // this generates a separate chunk (photos.[hash].js) for this route
+    // this generates a separate chunk (photo_list.[hash].js) for this route
     // which is lazy-loaded when the route is visited.
-    // component: () => import(/* webpackChunkName: "photos" */ '../views/Photos.vue'),
-    component:Photos
+    // component: () => import(/* webpackChunkName: "photo_list" */ '../views/PhotoList.vue'),
+    component:PhotoList
   },
   {
-    path:'/photos/image/:id',
-    name: 'image',
-    component:Image
+    path:'/photo_list/photo_display/:id',
+    name: 'photo_display',
+    component:PhotoDisplay
   },
   {
     path:'*',
