@@ -2,7 +2,7 @@
   <div class="photo-display">
     <div class="img_wrap d-flex align-items-center justify-content-center">
       <transition name="fade" appear>
-      <img :src="img" id="target" />
+      <img :src="images[this.$route.params.id]" id="target" />
       </transition>
     </div>
     <div class="page_transition text-center mx-auto mb-5">
@@ -16,6 +16,7 @@
 <script>
 // @ is an alias to /src
 import 'focus-visible';
+import {mapGetters} from 'vuex';
 
 export default {
   data() {
@@ -27,9 +28,10 @@ export default {
     };
   },
   computed: {
-    img() {
-      return this.$store.getters.images[this.$route.params.id];
-    },
+    ...mapGetters(["images"]),
+    // img() {
+    //   return this.$store.getters.images[this.$route.params.id];
+    // },
     partition() {
       if(this.prev === true && this.next === true) {
         return true
@@ -61,9 +63,9 @@ export default {
       this.$router.push('/')
       return
     }
-    let target = document.getElementById("target");
-    this.width = target.width / 2;
-    this.height = target.height / 2;
+    // let target = document.getElementById("target");
+    // this.width = target.width / 2;
+    // this.height = target.height / 2;
     this.prev = true
     this.next = true
     if(this.$route.params.id === "0") {

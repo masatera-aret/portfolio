@@ -23,15 +23,8 @@
 
 <script>
 export default {
-  data() {
-    return {
-      imgs: ""
-    };
-  },
-  methods: {
-    imgLength(value) {
-      this.imgs = value;
-    }
+  beforeCreate() {
+    this.$store.commit("imageSetter")
   }
 };
 </script>
