@@ -24,7 +24,7 @@
 <script>
 export default {
   beforeCreate() {
-    this.$store.commit("imageSetter")
+    this.$store.commit("imageSet")
   }
 };
 </script>

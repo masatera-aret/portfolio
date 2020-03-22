@@ -29,9 +29,6 @@ export default {
   },
   computed: {
     ...mapGetters(["images"]),
-    // img() {
-    //   return this.$store.getters.images[this.$route.params.id];
-    // },
     partition() {
       if(this.prev === true && this.next === true) {
         return true

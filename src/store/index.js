@@ -15,7 +15,7 @@ export default new Vuex.Store({
     }
   },
   mutations:{
-    imageSetter(state) {
+    imageSet(state) {
       for(let i = 1;i <= 13;i++) {
         state.images[(i - 1)] = require(`../../static/img_${i}.jpg`);
       }
