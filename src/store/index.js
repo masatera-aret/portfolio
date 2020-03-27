@@ -5,9 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state:{
-    images:[
-      // require(`../../static/img_1.jpg`),
-    ],
+    images:[],
   },
   getters:{
     images(state) {
@@ -16,8 +14,8 @@ export default new Vuex.Store({
   },
   mutations:{
     imageSet(state) {
-      for(let i = 1;i <= 13;i++) {
-        state.images[(i - 1)] = require(`../../static/img_${i}.jpg`);
+      for(let i = 1;i <= 15;i++) {
+        state.images[(i - 1)] = `https://static.teshimato.site/images/img_${i}.jpg`;
       }
     }
   }

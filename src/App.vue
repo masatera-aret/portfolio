@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav" class="m-0 row flex-column">
       <div class="ml-4 px-0">
-        <h1 class="m-0"><a href="/">TERASHIMA MASATO</a></h1>
+        <h1 class="m-0"><a href="/">Chuck Nicholson</a></h1>
       </div>
       <div class="nav_list_link row col-12 px-0 m-0 justify-content-center">
         <div class="row text-center">
@@ -24,7 +24,7 @@
 <script>
 export default {
   beforeCreate() {
-    this.$store.commit("imageSet")
+    this.$store.commit("imageSet");
   }
 };
 </script>
