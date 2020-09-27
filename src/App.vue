@@ -2,7 +2,7 @@
   <div id="app">
     <div id="nav" class="m-0 row flex-column">
       <div class="ml-4 px-0">
-        <h1 class="m-0"><a href="/">Chuck Nicholson</a></h1>
+        <h1 class="m-0 title"><a href="/">Masato Terashima</a></h1>
       </div>
       <div class="nav_list_link row col-12 px-0 m-0 justify-content-center">
         <div class="row text-center">
@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="container px-5 px-md-0">
-      <transition name="fade" mode="out-in" appear>
+      <transition name="fade" mode="out-in">
         <keep-alive>
           <router-view />
         </keep-alive>
@@ -29,7 +29,9 @@ export default {
 };
 </script>
 
-<style>
+<style lang="scss">
+@import "./assets/sass/_variable";
+
 #app {
   font-family: serif, "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -53,15 +55,6 @@ export default {
   color: white;
   text-decoration: none;
 }
-.active--link::after {
-  content: "";
-  width: 100%;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-bottom: 1px solid rgb(230, 230, 230);
-}
 .router-link-exact-active::after {
   content: "";
   width: 100%;
@@ -69,7 +62,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid map-get($colors, dark_white);
 }
 
 .router-link:hover:not(.active--link)::after {
@@ -79,7 +72,7 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid map-get($colors, dark_white);
   animation: stretchBar 0.5s;
 }
 .router-link:not(.active--link)::after {
@@ -89,8 +82,19 @@ export default {
   left: 0;
   right: 0;
   bottom: 0;
-  border-bottom: 1px solid rgb(230, 230, 230);
+  border-bottom: 1px solid map-get($colors, dark_white);
   transition: 0.5s;
+}
+.active--link::after {
+  content: "";
+  width: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  opacity: 1;
+  border-bottom: 1px solid white;
+  transition: .5s;
 }
 
 .fade-enter,
@@ -99,7 +103,7 @@ export default {
 }
 
 .fade-enter-active {
-  animation: fadeIn 0.5s;
+  animation: fadeIn 0.3s;
 }
 /* .fade-leave-active {
   animation: fadeIn 0.2s reverse;

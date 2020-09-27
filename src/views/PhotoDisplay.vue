@@ -60,9 +60,6 @@ export default {
       this.$router.push('/')
       return
     }
-    // let target = document.getElementById("target");
-    // this.width = target.width / 2;
-    // this.height = target.height / 2;
     this.prev = true
     this.next = true
     if(this.$route.params.id === "0") {
@@ -86,7 +83,7 @@ export default {
 };
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 button {
   background:none;
   border:none;
@@ -116,7 +113,5 @@ img {
   max-width: 100%;
   max-height:100%;
 }
-.animate {
-  animation: fadeIn 2s;
-}
+
 </style>

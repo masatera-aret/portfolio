@@ -1,8 +1,5 @@
 <template>
   <div class="home">
-    <!-- <ul class="list-unstyled">
-      <li>やるなら今しかない</li>
-    </ul> -->
     <p>
     これはテストです<br />
     これはテストです<br />
@@ -27,7 +24,7 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
+<style lang="scss" scoped>
 @import "@/assets/sass/prepends";
 
 .home {

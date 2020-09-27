@@ -2,9 +2,7 @@ import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
 import PhotoList from '../views/PhotoList.vue'
-// import PhotoDisplay from '../views/PhotoDisplay.vue'
-// const PhotoList = () => import(/* webpackChunkName: "photo-list" */ '../views/PhotoList.vue')
-const PhotoDisplay = () => import(/* webpackChunkName: "photo-display" */ '../views/PhotoDisplay.vue')
+import PhotoDisplay from '../views/PhotoDisplay.vue'
 
 Vue.use(VueRouter)
 
