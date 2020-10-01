@@ -13,6 +13,7 @@
     これはテストです<br />
     これはテストです<br />
     </p>
+    <h2 class="hover">hoverのテスト</h2>
   </div>
 </template>
 
@@ -31,8 +32,22 @@ export default {
   font-size:2rem;
 }
 
-li {
-  padding:0;
-  margin-top: 7px;
+
+.hover {
+  cursor:pointer;
+  position: relative;
+  display: inline-block;
+  animation: blur 1.5s;
+  // transition-duration: 1.5s;
 }
+
+// .hover:hover {
+//   color:white;
+//   filter: blur(1.5rem);
+//   transition-duration: .5s;
+// }
+
+
+
+
 </style>

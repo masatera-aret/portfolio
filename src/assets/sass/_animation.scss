@@ -1,0 +1,19 @@
+@keyframes blur {
+  0% {
+    filter: blur(1.5rem);
+    opacity: 0;
+  }
+  100% {
+    filter: blur(0);
+    opacity: 1;
+  }
+}
+
+@keyframes stretchBar {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

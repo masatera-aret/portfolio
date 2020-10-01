@@ -41,24 +41,23 @@ export default {
     pagePrev() {
       this.next = true
       this.$route.params.id--
-      this.$router.push(`/photo_list/photo_display/${this.$route.params.id}`)
+      this.$router.push(`/photos/photo-view/${this.$route.params.id}`)
       if(this.$route.params.id === "0") {
       this.prev = false
       }
     },
     pageNext() {
+
       this.prev = true
-      this.$route.params.id++
-      this.$router.push(`/photo_list/photo_display/${this.$route.params.id}`)
+      this.$router.push(`/photos/photo-view/${Number(this.$route.params.id) + 1}`)
       if(this.$route.params.id === String(this.$store.getters.images.length - 1)) {
       this.next = false
       }
     }
   },
   activated() {
-    if(this.$route.params.id > (this.$store.getters.images.length - 1) || this.$route.params.id < 0 || isNaN(this.$route.params.id) ) {
+    if(this.$route.params.id > (this.images.length - 1) || this.$route.params.id < 0 || isNaN(this.$route.params.id) ) {
       this.$router.push('/')
-      return
     }
     this.prev = true
     this.next = true
@@ -73,12 +72,18 @@ export default {
     this.height = "";
   },
   updated() {
-    let target = document.getElementById('target')
-    if(this.$route.params.id && target) {
-      target.animate({
-        opacity:[0,1]
-      },300)
-    }
+    // console.log("id:",Number(this.$route.params.id) + 1)
+    // console.log("length:",this.images.length)
+    // if(Number(this.$route.params.id) + 1 < this.images.length) {
+    //   this.next = true
+    // }else {
+    //   this.next = false
+    // }
+    // if(Number(this.$route.params.id) > 0) {
+    //   this.prev = true
+    // }else {
+    //   this.prev = false
+    // }
   },
 };
 </script>
